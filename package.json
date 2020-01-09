@@ -99,6 +99,8 @@
     "@tradeshift/elements.header": "file:packages/components/header",
     "@tradeshift/elements.help-text": "file:packages/components/help-text",
     "@tradeshift/elements.icon": "file:packages/components/icon",
+    "@tradeshift/elements.input": "file:packages/components/input",
+    "@tradeshift/elements.label": "file:packages/components/label",
     "@tradeshift/elements.list-item": "file:packages/components/list-item",
     "@tradeshift/elements.modal": "file:packages/components/modal",
     "@tradeshift/elements.note": "file:packages/components/note",
@@ -110,6 +112,7 @@
     "@tradeshift/elements.spinner": "file:packages/components/spinner",
     "@tradeshift/elements.status": "file:packages/components/status",
     "@tradeshift/elements.tab": "file:packages/components/tab",
+    "@tradeshift/elements.table": "file:packages/components/table",
     "@tradeshift/elements.tabs": "file:packages/components/tabs",
     "@tradeshift/elements.tooltip": "file:packages/components/tooltip",
     "@tradeshift/elements.typography": "file:packages/components/typography"

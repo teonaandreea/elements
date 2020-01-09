@@ -40,6 +40,8 @@
 						'tooltip',
 						'typography',
 						'icon',
+						'input',
+						'label',
 						'aside',
 						'card',
 						'checkbox',
@@ -107,6 +109,21 @@
 					<ts-status class="grid-status" status="note" text="LTR شسيشسي"></ts-status>
 					<ts-status class="grid-status" dir="rtl" status="note" text="RTL شسيشسي"></ts-status>
 				</div>
+			</article>
+
+			<article>
+				<h2>Form</h2>
+				<ts-label>Text</ts-label>
+				<ts-input id="test_input">
+					<input value="dfa" />
+				</ts-input>
+				<script>
+					setTimeout(() => {
+						let input = document.querySelector('#test_input');
+						debugger;
+						input.disabled = true;
+					}, 1000);
+				</script>
 			</article>
 
 			<article>
