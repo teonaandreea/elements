@@ -2,7 +2,6 @@
 
 :host,
 :host > div {
-	display: block;
 	width: 100%;
 }
 
@@ -23,7 +22,7 @@
 }
 
 ::slotted(input:not([disabled]):hover) {
-	border-color: var(--ts-color-blue-light);
+	border: var(--ts-border-width-focused) var(--ts-border-type) var(--ts-color-blue-light);
 }
 
 ::slotted(input:not([disabled]):focus) {

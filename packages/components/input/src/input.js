@@ -14,23 +14,26 @@ customElementDefineHelper(
 			};
 		}
 
-		attributeChangedCallback(name, oldval, newval) {
+		attributeChangedCallback(name, oldVal, newVal) {
 			const input = this.getSlotInput();
 			if (name === 'disabled' && input) {
-				input.disabled = newval;
+				input.disabled = newVal !== undefined && newVal !== null;
 			}
-			super.attributeChangedCallback(name, oldval, newval);
+			super.attributeChangedCallback(name, oldVal, newVal);
 		}
 
-		firstUpdated(changeedProperties) {
+		firstUpdated() {
 			const input = this.getSlotInput();
-			if ((this.disabled !== undefined || this.disabled !== null) && input) {
+			if (this.disabled !== undefined && this.disabled !== null && input) {
 				input.disabled = true;
 			}
 		}
 
 		getSlotInput() {
 			const slot = this.shadowRoot.querySelector('slot');
+			if (!slot) {
+				return null;
+			}
 			const elements = slot.assignedNodes().filter(el => el.constructor.name === 'HTMLInputElement');
 			if (elements.length < 1) {
 				console.warn('We need one input element in the slot');
